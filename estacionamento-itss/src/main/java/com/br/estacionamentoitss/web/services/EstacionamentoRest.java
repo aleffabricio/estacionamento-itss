@@ -36,7 +36,7 @@ public class EstacionamentoRest {
          if (hora <= 60) {
             estacionamento.setValorEstacionamento(estacionamento.getPatio().getTaxaHora());
          } else {
-            estacionamento.setValorEstacionamento((hora * estacionamento.getPatio().getTaxaHora()) / 60);
+            estacionamento.setValorEstacionamento((hora * estacionamento.getPatio().getTaxaHora()) / 60);      
          }
          return estacionamentoDAO.save(estacionamento);
          

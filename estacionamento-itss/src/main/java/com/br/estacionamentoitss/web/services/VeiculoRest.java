@@ -30,30 +30,20 @@ public class VeiculoRest {
    @RequestMapping(value = "/salvar/veiculo", method = RequestMethod.POST)
    public Veiculo salvar(@RequestBody Veiculo veiculo) throws Exception {
 
-      salvarCliente(veiculo.getCliente());
-      salvarEstacionamento(veiculo);
+	  if(veiculo.getCliente().getCpf() != null) {
+		  clienteDAO.save(veiculo.getCliente());
+	  }else {
+		  throw new Exception("CPF e necessario para salvar.");
+	  }
+	    
+      Estacionamento estacionamento = new Estacionamento();
+
+      Date dtEntrada = new Date();
+      estacionamento.setEntrada(dtEntrada);
+      estacionamento.setPlaca(veiculo.getPlaca());
+      estacionamento.setPatio(veiculo.getPatio());
+      estacionamentoDAO.save(estacionamento);
 
       return veiculoDAO.save(veiculo);
    }
-
-   public Cliente salvarCliente(Cliente c) throws Exception {
-
-      if (c.getCpf() != null) {
-         return clienteDAO.save(c);
-      }else {
-    	  throw new Exception("CPF e obrigatorio para salvar.");
-      }
-   }
-
-   public void salvarEstacionamento(Veiculo veiculo) {
-      Estacionamento estacionamento = new Estacionamento();
-
-      Date entrada = new Date();
-      estacionamento.setEntrada(entrada);
-      estacionamento.setPlaca(veiculo.getPlaca());
-      estacionamento.setPatio(veiculo.getPatio());
-
-      estacionamentoDAO.save(estacionamento);
-   }
-
 }

@@ -42,7 +42,7 @@ public class PatioRest {
       
       map.put("totalVagasOcupadas", totalVagasOcupadas);
       map.put("totalVagasLivres", totalVagasLivres);
-      map.put("quantidadeVaga", totalVagas);
+      map.put("quantidadeVagas", totalVagas);
 
       return map;
    }
