@@ -41,9 +41,9 @@ public class EstacionamentoRest {
          return estacionamentoDAO.save(estacionamento);
          
       } else {
-         estacionamento.setEntrada(dtEntrada);
+         estacionamento.setEntrada(dtEntrada); 
          return estacionamentoDAO.save(estacionamento);
-      }
+      } 
    }
 
    @RequestMapping(value = "/listar/veiculos", method = RequestMethod.GET)
