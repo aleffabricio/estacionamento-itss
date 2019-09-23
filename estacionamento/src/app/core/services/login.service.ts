@@ -34,6 +34,7 @@ export class AutenticarService {
   public salvarUsuario(usuario) {
     return this.http.post(`${this.API}/salvar/usuario`, usuario).subscribe((resp: Usuario) => {
       this.nomeUsuario = resp.usuario; 
+      alert('Usuario salvo com sucesso!');
       this.route.navigate(['/login']);
     });
   }
