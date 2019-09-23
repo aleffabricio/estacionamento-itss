@@ -9,6 +9,7 @@ import { VeiculoService } from 'src/app/core/services/veiculo.service';
 export class EstacionamentoComponent implements OnInit {
 
   veiculos: any;
+  estacionamento: any;
   
 
   constructor(private veiculoService: VeiculoService) { }
@@ -20,20 +21,19 @@ export class EstacionamentoComponent implements OnInit {
   public listarVeiculos(){
     this.veiculoService.listarVeiculos().subscribe((veiculo) => {
       this.veiculos = veiculo;
-      this.formatarValores(this.veiculos);
       console.log(this.veiculos);
       
      });
   }
 
-  public formatarValores(veiculo){
-    veiculo.forEach((veiculo,index) => {
-      this.veiculos[index].entrada = (new Date(veiculo.entrada)).toLocaleString('pt-BR'); 
-     if(veiculo.saida != null && !(veiculo.saida == '')){
-      this.veiculos[index].saida = (new Date(veiculo.saida)).toLocaleString('pt-BR'); 
-     }
-      this.veiculos[index].valorEstacionamento = (veiculo.valorEstacionamento).toLocaleString('pt-BR'); 
-    });
+  public salvarBaixaEstacionamento(estacionamento){
+    console.log(JSON.stringify(estacionamento));
+    this.veiculoService.salvarBaixaEstacionamento(estacionamento).subscribe((estacionamento) => {
+      this.veiculos = estacionamento;
+      console.log(this.estacionamento);
+      alert('Registrado saida com sucesso!');
+      this.listarVeiculos();
+     });
   }
 
 }

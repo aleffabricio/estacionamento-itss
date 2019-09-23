@@ -79,20 +79,20 @@
                                     <th></th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr class="tr-shadow" *ngFor="let veiculo of veiculos" >
-                                        
-                                    <td>{{ veiculo.patio.descricao }}</td>
-                                    <td >{{ veiculo.entrada }}</td>
-                                    <td>{{ veiculo.saida }}</td>
+                            <tbody *ngFor="let veiculo of veiculos">
+                                    <tr class="spacer"></tr>
+                                <tr class="tr-shadow"  >  
+                                    <td >{{ veiculo.patio.descricao }}</td>
+                                    <td >{{ veiculo.entrada | date:'dd/MM/yyyy HH:mm'}}</td>
+                                    <td>{{ veiculo.saida | date:'dd/MM/yyyy HH:mm'}}</td>
                                     <td class="desc">{{ veiculo.permanencia }} minutos</td>
                                     <td>{{ veiculo.placa }}</td>
                                     <td>
-                                        <span class="status--process">R$ {{ veiculo.valorEstacionamento }}</span>
+                                        <span class="status--process">R$ {{ veiculo.valorEstacionamento |  number: '1.2-2'}}</span>
                                     </td>
                                     <td>
                                         <div class="table-data-feature">
-                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Registrar baixa">
+                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Registrar baixa" (click)="salvarBaixaEstacionamento(veiculo)">
                                                 <i class="zmdi zmdi-mail-send"></i>
                                             </button>
                                         </div>
