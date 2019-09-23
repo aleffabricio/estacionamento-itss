@@ -29,7 +29,7 @@ Aqui fala quantas vagas tem disponivel e quantas tem ocupado.
 
 ## Projeto Estacionamento ITSS
 
-O projeto foi separado em duas partes, onde temos o backend **estacionamento-itss** (Spring Boot - Java) e **Frontend** (Angular CLI 8.1.2).
+O projeto foi separado em duas partes, onde temos o backend **estacionamento-itss** (Spring Boot - Java) e **estacionamento** (Angular CLI 8.1.2).
 
 ## Como executar o backend
 
