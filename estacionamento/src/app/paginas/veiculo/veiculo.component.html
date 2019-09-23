@@ -1,0 +1,136 @@
+<div class="page-wrapper">
+
+        <!-- MENU SIDEBAR-->
+        <app-menu></app-menu>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" >
+                            </form>
+                            <div class="header-button ">
+                                
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="image">
+                                            <img src="assets/logo.jpg" alt="John Doe" />
+                                        </div>
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#">Usuario teste</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img src="assets/logo.jpg" alt="John Doe" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <h5 class="name">
+                                                        <a href="#">usuario teste</a>
+                                                    </h5>
+                                                    <span class="email">usuario@example.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__body">
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">Cadastro de veiculo</div>
+                                <div class="card-body card-block">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-car"></i>
+                                                </div>
+                                                <input type="text" id="modelo" name="modelo" placeholder="Modelo" class="form-control" [(ngModel)]="veiculo.modelo">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-asterisk"></i>
+                                                </div>
+                                                <input type="cor" id="cor" name="cor" placeholder="Cor" class="form-control" maxlength="11" [(ngModel)]="veiculo.cor"> 
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-asterisk"></i>
+                                                </div>
+                                                <input type="text" id="placa" name="placa" placeholder="Placa" class="form-control" maxlength="8" [(ngModel)]="veiculo.placa">
+                                            </div>
+                                        </div>
+                
+                                       
+                                    </form>
+                                </div>  
+                                <div class="card-header">Vincular cliente</div>
+                                <div class="card-body card-block">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <div class="row form-group">
+                                                    <div class="col-12 col-md-9">
+                                                        <select [(ngModel)]="veiculo.cliente" name="cliente"> 
+                                                                <option *ngFor="let cliente of clientes" [ngValue]="cliente">{{ cliente.nome }}</option>
+                                                        </select>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-header">Vincular patio</div>
+                                <div class="card-body card-block">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <div class="row form-group">
+                                                    <div class="col-12 col-md-9">
+
+                                                        <select [(ngModel)]="veiculo.patio" name="patio"> 
+                                                                <option *ngFor="let patio of patios" [ngValue]="patio">{{ patio.descricao }}</option>
+                                                        </select>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-success btn-sm" (click)="salvarVeiculo()">Salvar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>             
+                </div>
+            </div>
+        </div>
+    </div>

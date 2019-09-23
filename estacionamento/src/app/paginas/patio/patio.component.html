@@ -1,0 +1,107 @@
+<div class="page-wrapper">
+
+        <!-- MENU SIDEBAR-->
+        <app-menu></app-menu>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" >
+                            </form>
+                            <div class="header-button ">
+                                
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="image">
+                                            <img src="assets/logo.jpg" alt="John Doe" />
+                                        </div>
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#">Usuario teste</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img src="assets/logo.jpg" alt="John Doe" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <h5 class="name">
+                                                        <a href="#">usuario teste</a>
+                                                    </h5>
+                                                    <span class="email">usuario@example.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__body">
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main-content ">
+                <div class="section__content section__content--p30">
+                    <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">Cadastro de patio</div>
+                                <div class="card-body card-block">
+                                    <form action="" method="post" class="">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-user"></i>
+                                                </div>
+                                                <input type="text" id="username" name="username" placeholder="Descricão" class="form-control"  [(ngModel)]="patio.descricao">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-asterisk"></i>
+                                                </div>
+                                                <input type="number" id="quantidadeVaga" name="quantidadeVaga" placeholder="Quantidade de vagas" class="form-control" maxlength="11"  [(ngModel)]="patio.quantidadeVaga"> 
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-asterisk"></i>
+                                                </div>
+                                                <input type="number" id="taxaHora" name="taxaHora" placeholder="Taxa da hora" class="form-control" maxlength="11"  [(ngModel)]="patio.taxaHora">
+                                            </div>
+                                        </div>
+                                        <div class="form-actions form-group">
+                                            <button type="submit" class="btn btn-success btn-sm" (click)="salvarPatio()">Salvar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>             
+                </div>
+            </div>
+        </div>
+    </div>
