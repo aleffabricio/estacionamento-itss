@@ -20,7 +20,7 @@ public class UsuarioRest {
    @Autowired
    private UsuarioDao usuarioDAO;
 
-   @RequestMapping(value = "/novo/usuario", method = RequestMethod.POST)
+   @RequestMapping(value = "/salvar/usuario", method = RequestMethod.POST)
    public Usuario salvar(@RequestBody Usuario usuario) throws NoSuchAlgorithmException, UnsupportedEncodingException {
 
       String senha = usuario.getSenha();
@@ -46,7 +46,10 @@ public class UsuarioRest {
 
       senha = new BigInteger(1, algorithm.digest()).toString(16);
 
-      return u.getUsuario() != null && u.getSenha().equals(senha) ? true : false;
+      return u != null 
+    		  && u.getUsuario() != null
+    		  && u.getSenha().equals(senha) 
+    		  ? true : false;
    }
 
 }

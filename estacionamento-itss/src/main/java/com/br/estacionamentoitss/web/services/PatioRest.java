@@ -40,8 +40,8 @@ public class PatioRest {
       int totalVagasOcupadas = patioDAO.findByTotalVagasOcupadas();
       int totalVagasLivres = totalVagas - totalVagasOcupadas;
       
-      map.put("totalVagasOcupadas", totalVagasOcupadas);
-      map.put("totalVagasLivres", totalVagasLivres);
+      map.put("vagasOcupadas", totalVagasOcupadas);
+      map.put("vagasLivres", totalVagasLivres);
       map.put("quantidadeVagas", totalVagas);
 
       return map;
