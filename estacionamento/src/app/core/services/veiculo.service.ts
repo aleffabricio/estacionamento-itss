@@ -16,4 +16,8 @@ export class VeiculoService {
   public salvarVeiculo(veiculo) {
     return this.http.post(`${this.API}/salvar/veiculo`, veiculo).pipe(take(1));
   }
+
+  public listarVeiculos() {
+    return this.http.get(`${this.API}/listar/veiculos`).pipe(take(1));
+  }
 }

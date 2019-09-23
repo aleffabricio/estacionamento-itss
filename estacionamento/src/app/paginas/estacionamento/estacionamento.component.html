@@ -1,0 +1,107 @@
+<div class="page-wrapper">
+
+    <!-- MENU SIDEBAR-->
+    <app-menu></app-menu>
+    <!-- END MENU SIDEBAR-->
+
+    <!-- PAGE CONTAINER-->
+    <div class="page-container">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="header-wrap">
+                        <form class="form-header" >
+                        </form>
+                        <div class="header-button ">
+                            
+                            <div class="account-wrap">
+                                <div class="account-item clearfix js-item-menu">
+                                    <div class="image">
+                                        <img src="assets/logo.jpg" alt="John Doe" />
+                                    </div>
+                                    <div class="content">
+                                        <a class="js-acc-btn" href="#">Usuario teste</a>
+                                    </div>
+                                    <div class="account-dropdown js-dropdown">
+                                        <div class="info clearfix">
+                                            <div class="image">
+                                                <a href="#">
+                                                    <img src="assets/logo.jpg" alt="John Doe" />
+                                                </a>
+                                            </div>
+                                            <div class="content">
+                                                <h5 class="name">
+                                                    <a href="#">usuario teste</a>
+                                                </h5>
+                                                <span class="email">usuario@example.com</span>
+                                            </div>
+                                        </div>
+                                        <div class="account-dropdown__body">
+                                            <div class="account-dropdown__item">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-account"></i>Account</a>
+                                            </div>
+                                            <div class="account-dropdown__item">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-settings"></i>Setting</a>
+                                            </div>
+                                            <div class="account-dropdown__item">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                            </div>
+                                        </div>
+                                        <div class="account-dropdown__footer">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-power"></i>Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main-content">
+            <div class="section__content section__content--p30">
+                <div class="">
+                    <div class="table-responsive table-responsive-data2">
+                        <table class="table table-data2">
+                            <thead>
+                                <tr>
+                                    <th>Data Entrada</th>
+                                    <th>Data Saida</th>
+                                    <th>Tempo Estacionado</th>
+                                    <th>Placa</th>
+                                    <th>Valor</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr-shadow" *ngFor="let veiculo of veiculos" >
+                                        
+                                    <td >{{ veiculo.entrada }}</td>
+                                    <td>{{ veiculo.saida }}</td>
+                                    <td class="desc">{{ veiculo.permanencia }} minutos</td>
+                                    <td>{{ veiculo.placa }}</td>
+                                    <td>
+                                        <span class="status--process">R$ {{ veiculo.valorEstacionamento }}</span>
+                                    </td>
+                          
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Registrar baixa">
+                                                <i class="zmdi zmdi-mail-send"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>             
+            </div>
+        </div>
+    </div>
+</div>

@@ -13,6 +13,7 @@ import { HomeComponent } from './paginas/home/home.component';
 import { DashboardComponent } from './paginas/dashboard/dashboard.component';
 import { MenuComponent } from './paginas/menu/menu.component';
 import { VeiculoComponent } from './paginas/veiculo/veiculo.component';
+import { EstacionamentoComponent } from './paginas/estacionamento/estacionamento.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { VeiculoComponent } from './paginas/veiculo/veiculo.component';
     HomeComponent,
     DashboardComponent,
     MenuComponent,
-    VeiculoComponent
+    VeiculoComponent,
+    EstacionamentoComponent
   ],
   imports: [
     BrowserModule,
