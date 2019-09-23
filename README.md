@@ -1,5 +1,3 @@
-## Fluxo inicial
-
 ## Tela de login
 ![login](https://user-images.githubusercontent.com/14118647/65402694-60cf0380-dda6-11e9-97f4-7f27d752c9e3.png)
 
@@ -14,10 +12,18 @@ Aqui fala quantas vagas tem disponivel e quantas tem ocupado.
 
 ![tela1](https://user-images.githubusercontent.com/14118647/65402953-2a928380-dda8-11e9-8ba2-74fd89f5ccd0.PNG)
 
-## Agora basta seguir o fluxo de preenchimento até finalizar o processso
+## Cadastro cliente
 
 ![tela 2](https://user-images.githubusercontent.com/14118647/65403014-63325d00-dda8-11e9-83ad-9b0752f5c0a4.PNG)
+
+
+## Cadastro patio
+
 ![tela3](https://user-images.githubusercontent.com/14118647/65403015-63325d00-dda8-11e9-9d94-2b7a3029df06.PNG)
+
+
+## Cadastro de veiculo vinculando a um patio e ao cliente
+
 ![tela4](https://user-images.githubusercontent.com/14118647/65403016-63325d00-dda8-11e9-9df1-fcdac30548c0.PNG)
 
 
