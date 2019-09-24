@@ -49,8 +49,8 @@ export class VeiculoComponent implements OnInit {
       && this.veiculo.placa != null){
         console.log(this.veiculo);
         this.veiculoService.salvarVeiculo(this.veiculo).subscribe((veiculo: Veiculo) => { 
-          // this.veiculo = new Veiculo;
-          this.veiculo = veiculo;
+          this.veiculo = new Veiculo;
+          // this.veiculo = veiculo;
           alert('Veiculo salvo com sucesso');
          });
       }else{
